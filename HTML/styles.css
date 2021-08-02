@@ -25,14 +25,13 @@ a img{border:0px;}
 /****************************************************/
 
 #header{
-	width:864px;
+	width:85%;
 	height:115px;
 	background-color:#222222;
-	padding:0px 43px;
 	position: fixed;
 	top:0px;
-	left:50%;
-	margin: 0 0 0 -475px;
+	left:7.5%;
+	margin:0px auto 300px auto;
 }
 #header #logo{
 	padding-top:40px;
