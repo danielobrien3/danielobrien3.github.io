@@ -97,11 +97,15 @@ a img{border:0px;}
 
 #experience{margin:0px 43px; padding-top:115px;}
 #experience .col{
-	width:235px;
-	float:left;
+	max-width:350px;
+	padding-right:25px;
+	margin:auto;
 }
-#experience .content{overflow:auto;}
-#experience .col-mid{margin:0px 65px;}
+#experience .content{
+	overflow:auto;
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
 
 /****************************************************/
 /* WORK SECTION */
