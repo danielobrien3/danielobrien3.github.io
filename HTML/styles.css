@@ -37,7 +37,7 @@ a img{border:0px;}
 	padding-top:40px;
 	float:left;
 }
-#header #main-menu{float:right; padding-top:45px;}
+#header #main-menu{float:right; padding-top:45px; padding-right:40px;}
 #header #main-menu li{
 	float:left;
 	list-style:none;
