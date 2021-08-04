@@ -96,7 +96,7 @@
                     </p>
                 </div>
                 <div class="col">
-                    <h2>Multi-tiered Text-Similarity Analysis Tool</h2>
+                    <h2>Multi-tiered Text-Similarity Analysis Tool (<button id="thesisBtn">Click Here to View</button></h2>
                     <p>Developed a Python text-analysis script as part of the IBM-Marist Joint Study Program. Placed an emphasis on system
                     modularity and expandability. Every feature was deeply documented, with both specific implementation details and broad
                     design decisions. The text-analysis script improved efficiency using a multi-tiered document filter that resulted in a
@@ -113,6 +113,7 @@
             
         </div>
         <div id="thesisModal" class="modal">
+            <span class="close">&times;</span>
             <p>thesis goes here</p>
         </div> 
     </div>
@@ -152,7 +153,7 @@
 
 </div>
 
- <!-- The JavaScript -->  
+ <!-- The JavaScript --> this
         <script type="text/javascript">
     		$(function() {
                 $('#main-menu li a').bind('click',function(event){
@@ -164,11 +165,23 @@
 
                     event.preventDefault();
                 });
+                $('#thesisBtn').bind('click',function(event){
+                    document.getElementById("thesisModal").style.display = "block"
+                });
+                $(".close").bind('click', function(event){
+                    document.getElementById("thesisModal").style.display = "none"
+                });
             });
 			
  			 $(document).ready(function(){
     		$("a[rel^='prettyPhoto']").prettyPhoto({social_tools:false, deeplinking: false});
   			});
+
+            window.onclick = function(event){
+                if (event.target != document.getElementById("thesisModal") && event.target !=document.getElementById("thesisBtn")) {
+                   document.getElementById("thesisModal").style.display = "none";
+                }
+            }
 
         </script>
 </body>
