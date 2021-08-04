@@ -99,7 +99,7 @@ a img{border:0px;}
 #experience .col{
 	max-width:350px;
 	padding-right:25px;
-	margin:auto;
+	margin:0px auto;
 }
 #experience .content{
 	overflow:auto;
