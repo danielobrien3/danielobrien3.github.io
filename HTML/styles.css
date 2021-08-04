@@ -138,11 +138,19 @@ a img{border:0px;}
 
 #thesisModal{
 	margin-left:10%;
-	margin-top:5%;
+	margin-top:2%;
   border: 1px solid #888;
-	background:white;
 	width:80%;
-	height:80%;
+	height:90%;
+}
+
+.pdf {
+	width:100%;
+	height:100%;
+}
+
+.close{
+	display:none;
 }
 
 /****************************************************/
