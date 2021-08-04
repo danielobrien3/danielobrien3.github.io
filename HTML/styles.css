@@ -110,7 +110,9 @@ a img{border:0px;}
 /****************************************************/
 /* WORK SECTION */
 /****************************************************/
-
+#work a {
+	text-decoration:underline; color:#6a6969;
+}
 #work{margin:0px 43px; padding-top:115px;}
 #work .content{overflow:auto;}
 #work #work-thumbs li{
