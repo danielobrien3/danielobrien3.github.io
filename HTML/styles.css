@@ -1,11 +1,11 @@
 body{
 	background:url(images/minecraft-repeat.jpg);
 	margin:0px;
-	font: 400 12px/22px 'Open Sans', Verdana, Helvetica, sans-serif;
+	font: 400 18px/32px 'Open Sans', Verdana, Helvetica, sans-serif;
 	color:#6a6969;
 }
 h1{font: 400 58px/60px 'Bree Serif', Georgia, serif; color:#6a6969;}
-h2{font: 400 18px/22px 'Bree Serif', Georgia, serif; color:#6a6969;}
+h2{font: 400 24px/32px 'Bree Serif', Georgia, serif; color:#6a6969;}
 h3{font: 400 14px/16px 'Bree Serif', Georgia, serif; color:#6a6969;}
 ul{margin:0px; padding:0px;}
 a {text-decoration:none; color:#6a6969;}
@@ -120,6 +120,16 @@ a img{border:0px;}
 	padding:0px;
 }
 #work #work-thumbs li.last{margin:0px;}
+
+.modal{
+	display:none;
+	z-index: 1;
+	position:fixed;
+	width:80%;
+	height:80%;
+	margin:auto;
+
+}
 
 /****************************************************/
 /* CONNECT SECTION */
