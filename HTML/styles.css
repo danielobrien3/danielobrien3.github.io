@@ -157,17 +157,17 @@ a img{border:0px;}
 /* CONNECT SECTION */
 /****************************************************/
 #connect{margin:0px 43px; padding-top:20px;}
-#connect .content{overflow:auto;}
+#connect .content{
+	overflow:auto;
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows:1fr 1fr 1fr;
+	max-width:800px;
+}
+
 #connect #form{
 	width:410px;
 	float:left;
-}
-#connect #form span{
-	display:block;
-	float:left;
-	width:100px;
-	padding-top:5px;
-	font: 400 14px/16px 'Bree Serif', Georgia, serif;
 }
 #connect #form input{
 	float:left;
