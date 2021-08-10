@@ -95,9 +95,9 @@ a img{border:0px;}
 /* EXPERIENCE SECTION */
 /****************************************************/
 
-#experience{margin:0px 43px; padding-top:115px;}
+#experience{margin:0px 43px; padding-top:20px;}
 #experience .col, #work .col{
-	max-width:350px;
+	max-width:500px;
 	padding-right:25px;
 	margin:0px auto;
 }
@@ -113,7 +113,7 @@ a img{border:0px;}
 #work a {
 	text-decoration:underline; color:#6a6969;
 }
-#work{margin:0px 43px; padding-top:115px;}
+#work{margin:0px 43px; padding-top:20px;}
 #work .content{overflow:auto;}
 #work #work-thumbs li{
 	list-style:none;
@@ -156,7 +156,7 @@ a img{border:0px;}
 /****************************************************/
 /* CONNECT SECTION */
 /****************************************************/
-#connect{margin:0px 43px; padding-top:115px;}
+#connect{margin:0px 43px; padding-top:20px;}
 #connect .content{overflow:auto;}
 #connect #form{
 	width:410px;
