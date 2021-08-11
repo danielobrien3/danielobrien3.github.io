@@ -236,7 +236,7 @@ a img{border:0px;}
 #connect #social-footer #sm-links li a.vimeo{background:url(images/sm-vimeo-icon.png) no-repeat; width:27px;}
 #connect #social-footer #sm-links li a.google{background:url(images/sm-google-icon.png) no-repeat;}
 #connect #social-footer #sm-links li a.youtube{background:url(images/sm-youtube-icon.png) no-repeat; width:28px;}
-#connect #social-footer #sm-links li a.linkedin{background:url(images/sm-linkedin-icon.png) no-repeat;}
+#connect a.linkedin{background:url(images/sm-linkedin-icon.png) no-repeat;}
 
 /****************************************************/
 /* MISC */
