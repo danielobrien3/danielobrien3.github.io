@@ -1,7 +1,7 @@
 body{
 	background:url(images/minecraft-repeat.jpg);
 	margin:0px;
-	font: 400 18px/32px 'Open Sans', Verdana, Helvetica, sans-serif;
+	font: 400 20px/32px 'Open Sans', Verdana, Helvetica, sans-serif;
 	color:#6a6969;
 }
 h1{font: 400 58px/60px 'Bree Serif', Georgia, serif; color:#6a6969;}
@@ -15,7 +15,7 @@ a img{border:0px;}
 #container{
 	width:85%;
 	margin:0px auto 300px auto;
-	background-color:#222222ef;
+	background-color:#222222f5;
 	overflow:auto;
 	padding-bottom:100px;
 }
@@ -86,10 +86,10 @@ a img{border:0px;}
 	float:left;
 	margin-right:20px;
 }
-#about .content #service-icons li.services-design{background:url(images/icon-1.png) no-repeat;}
-#about .content #service-icons li.services-mobile{background:url(images/icon-2.png) no-repeat;}
-#about .content #service-icons li.services-film{background:url(images/icon-3.png) no-repeat;}
-#about .content #service-icons li.services-photo{background:url(images/icon-4.png) no-repeat;}
+#about .content #service-icons li.services-design{background:url(images/greyscaleruby.png) no-repeat;}
+#about .content #service-icons li.services-mobile{background:url(images/greyscalejava.png) no-repeat;}
+#about .content #service-icons li.services-film{background:url(images/greyscalepython.png) no-repeat;}
+#about .content #service-icons li.services-photo{background:url(images/greyscalejavascript.png) no-repeat;}
 
 /****************************************************/
 /* EXPERIENCE SECTION */
