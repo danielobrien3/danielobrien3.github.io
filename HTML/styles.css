@@ -156,13 +156,24 @@ a img{border:0px;}
 /****************************************************/
 /* CONNECT SECTION */
 /****************************************************/
-#connect{margin:0px 43px; padding-top:20px;}
+#connect{
+	margin:0px 43px; padding-top:20px;
+}
 #connect .content{
 	overflow:auto;
 	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+}
+
+#connect .content div{
+	max-width:500px;
+	padding-right:25px;
+	margin:0px auto;
+}
+
+#connect .content .contact{
+	display:grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows:1fr 1fr 1fr;
-	max-width:800px;
 }
 
 #connect #form{
