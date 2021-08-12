@@ -75,6 +75,12 @@ function draw_start_screen(){
 	snakeboard_ctx.fillText(score.toString(), snakeboard.width/2, 72)
 	snakeboard_ctx.fillText("Snake", snakeboard.width/2 - (5*10), snakeboard.height/2 - 36)
 	snakeboard_ctx.fillText("Press Any Button To Start", snakeboard.width/2 - (16*10), snakeboard.height/2 +18)
+
+	let image = new Image()
+	image.src="images/redSnake.png"
+	image.onload = function(){
+		snakeboard_ctx.drawImage(image, snakeboard.width/2 - 96, snakeboard.height - 200)
+	}
 }
 
 function start_game(event){
