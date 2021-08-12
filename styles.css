@@ -260,13 +260,16 @@ p{color:#806560}
 #games .content{
 	overflow:auto;
 	display:grid;
-	grid-template-columns:1fr 1fr 1fr;
 }
 
 #games .content div{
-	max-width:500px;
-	padding-right:25px;
+
+	display:block;
 	margin:0px auto;
+}
+
+#games h2{
+	text-align: center;
 }
 
 #games .content .snakeCanvas{

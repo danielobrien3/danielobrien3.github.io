@@ -1,4 +1,4 @@
-const board_border = 'black';
+const board_border = '#e20047';
 const board_background = "#222222";
 const snake_col = 'lightblue';
 const snake_border = 'darkblue';
@@ -45,7 +45,7 @@ function main() {
 		drawSnake();
 		// Call main again
 		main();
-	}, 100)
+	}, 60)
 }
 
 // draw a border around the canvas
