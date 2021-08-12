@@ -1,7 +1,9 @@
 const board_border = 'black';
-const board_background = "white";
+const board_background = "#222222";
 const snake_col = 'lightblue';
 const snake_border = 'darkblue';
+const food_col = "#ff8c73";
+const food_border = "#e20047";
 
 let snake = [
 	{ x: 200, y: 200 }, 
@@ -66,8 +68,8 @@ function move_snake() {
 
 
 function drawSnakePart(snakePart) {
-	snakeboard_ctx.fillStyle = 'lightblue';
-	snakeboard_ctx.strokestyle = 'darkblue';
+	snakeboard_ctx.fillStyle = snake_col;
+	snakeboard_ctx.strokestyle = snake_border;
 	snakeboard_ctx.fillRect(snakePart.x, snakePart.y, 10, 10);
 	snakeboard_ctx.strokeRect(snakePart.x, snakePart.y, 10, 10);
 }
@@ -84,10 +86,10 @@ function has_game_ended() {
 }
 
 function change_direction(event) {
-	const LEFT_KEY = 37;
-	const RIGHT_KEY = 39;
-	const UP_KEY = 38;
-	const DOWN_KEY = 40;
+	const LEFT_KEY = 65;
+	const RIGHT_KEY = 68;
+	const UP_KEY = 87;
+	const DOWN_KEY = 83;
 
 	// Prevent the snake from reversing
 
@@ -122,8 +124,8 @@ function drawSnake() {
 }
 
 function drawFood() {
-	snakeboard_ctx.fillStyle = 'lightgreen';
-	snakeboard_ctx.strokestyle = 'darkgreen';
+	snakeboard_ctx.fillStyle = food_col;
+	snakeboard_ctx.strokestyle = food_border;
 	snakeboard_ctx.fillRect(food_x, food_y, 10, 10);
 	snakeboard_ctx.strokeRect(food_x, food_y, 10, 10);
 }
