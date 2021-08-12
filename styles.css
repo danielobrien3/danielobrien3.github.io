@@ -247,6 +247,34 @@ a img{border:0px;}
 #connect #social-footer #sm-links li a.youtube{background:url(images/sm-youtube-icon.png) no-repeat; width:28px;}
 #connect a.linkedin{background:url(images/sm-linkedin-icon.png) no-repeat;}
 
+
+/****************************************************/
+/* Games */
+/****************************************************/
+
+
+#games{
+	margin:0px 43px; padding-top:20px;
+}
+#games .content{
+	overflow:auto;
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+}
+
+#games .content div{
+	max-width:500px;
+	padding-right:25px;
+	margin:0px auto;
+}
+
+#games .content .snakeCanvas{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}
+
 /****************************************************/
 /* MISC */
 /****************************************************/
