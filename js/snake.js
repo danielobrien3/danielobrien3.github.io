@@ -7,6 +7,8 @@ const food_border = "black";
 const score_col = "lightblue";
 const score_border = "darkblue";
 const score_font = "16px Arial"
+const title_col ="#e20047" 
+const title_font = "36px Arial"
 
 let snake = [
 	{ x: 200, y: 200 }, 
@@ -19,6 +21,7 @@ let snake = [
 let score = 0;
 // True if changing direction
 let changing_direction = false;
+let game_has_started = false;
 
 let food_x;
 let food_y;
@@ -37,9 +40,22 @@ main();
 gen_food();
 
 document.addEventListener("keydown", change_direction);
+document.addEventListener("keydown", start_game);
 // main function called repeatedly to keep the game running
 function main() {
-	if (has_game_ended()) return;
+	clear_board();
+	game_has_started = false;
+	console.log("game started: " + game_has_started)
+	changing_direction=false;
+	draw_start_screen();
+	score = 0
+}
+
+function cycle(){
+	if (has_game_ended()){
+		main();
+		return;
+	}
 	changing_direction = false;
 	setTimeout(function onTick() {
 		clear_board();
@@ -48,8 +64,33 @@ function main() {
 		drawSnake();
 		draw_score();
 		// Call main again
-		main();
+		cycle();
 	}, 60)
+}
+
+function draw_start_screen(){
+	snakeboard_ctx.fillStyle = title_col
+	snakeboard_ctx.font = title_font
+	snakeboard_ctx.fillText("Last Score", snakeboard.width/2, 36)
+	snakeboard_ctx.fillText(score.toString(), snakeboard.width/2, 72)
+	snakeboard_ctx.fillText("Snake", snakeboard.width/2 - (5*10), snakeboard.height/2 - 36)
+	snakeboard_ctx.fillText("Press Any Button To Start", snakeboard.width/2 - (16*10), snakeboard.height/2 +18)
+}
+
+function start_game(event){
+	if(!game_has_started){
+		console.log("start game")
+		game_has_started = true;
+
+		snake = [
+			{ x: 200, y: 200 }, 
+			{ x: 190, y: 200 }, 
+			{ x: 180, y: 200 },
+			{ x: 170, y: 200 }, 
+			{ x: 160, y: 200 },
+		];
+		cycle();
+	}
 }
 
 // draw a border around the canvas
