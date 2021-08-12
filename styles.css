@@ -1,16 +1,17 @@
 body{
-	background:url(images/nintendo.jpg);
+	background:url(images/rednintendo.jpg);
 	margin:0px;
 	font: 400 20px/32px 'Open Sans', Verdana, Helvetica, sans-serif;
 	color:#6a6969;
 }
-h1{font: 400 58px/60px 'Bree Serif', Georgia, serif; color:#6a6969;}
-h2{font: 400 24px/32px 'Bree Serif', Georgia, serif; color:#6a6969;}
+h1{font: 400 58px/60px 'Bree Serif', Georgia, serif; color:#ff8c73;}
+h2{font: 400 24px/32px 'Bree Serif', Georgia, serif; color:#806560;}
 h3{font: 400 14px/16px 'Bree Serif', Georgia, serif; color:#6a6969;}
 ul{margin:0px; padding:0px;}
-a {text-decoration:none; color:#6a6969;}
-a:hover {color:#979797;}
+a {text-decoration:none; color:#806560;}
+a:hover {color:#e20047;}
 a img{border:0px;}
+p{color:#806560}
 
 #container{
 	width:85%;
@@ -253,7 +254,7 @@ a img{border:0px;}
 .top-divider, .bottom-divider{
 	width:100%;
 	height:9px;
-	background:url(images/divider.png) repeat-x;
+	background:url(images/reddivider.png) repeat-x;
 	clear:both;
 }
 .top-divider{margin-bottom:40px;}
