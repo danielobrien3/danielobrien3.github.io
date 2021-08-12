@@ -1,9 +1,12 @@
-const board_border = '#e20047';
+const board_border = '#ff8c73';
 const board_background = "#222222";
 const snake_col = 'lightblue';
 const snake_border = 'darkblue';
 const food_col = "#ff8c73";
-const food_border = "#e20047";
+const food_border = "black";
+const score_col = "lightblue";
+const score_border = "darkblue";
+const score_font = "16px Arial"
 
 let snake = [
 	{ x: 200, y: 200 }, 
@@ -43,6 +46,7 @@ function main() {
 		drawFood();
 		move_snake();
 		drawSnake();
+		draw_score();
 		// Call main again
 		main();
 	}, 60)
@@ -53,7 +57,7 @@ function clear_board() {
 	//  Select the colour to fill the drawing
 	snakeboard_ctx.fillStyle = board_background;
 	//  Select the colour for the border of the canvas
-	snakeboard_ctx.strokestyle = board_border;
+	snakeboard_ctx.strokeStyle = board_border;
 	// Draw a "filled" rectangle to cover the entire canvas
 	snakeboard_ctx.fillRect(0, 0, snakeboard.width, snakeboard.height);
 	// Draw a "border" around the entire canvas
@@ -66,10 +70,19 @@ function move_snake() {
 	snake.pop();
 }
 
+function draw_score(){
+
+	//  Select the colour to fill the drawing
+	snakeboard_ctx.fillStyle = score_col;
+	snakeboard_ctx.font = score_font;
+	//  Select the colour for the border of the canvas
+	// Draw a "filled" rectangle to cover the entire canvas
+	snakeboard_ctx.fillText("score: " + score.toString() , snakeboard.width-((score.toString().length + 7)*8), 20)
+}
 
 function drawSnakePart(snakePart) {
 	snakeboard_ctx.fillStyle = snake_col;
-	snakeboard_ctx.strokestyle = snake_border;
+	snakeboard_ctx.strokeStyle = snake_border;
 	snakeboard_ctx.fillRect(snakePart.x, snakePart.y, 10, 10);
 	snakeboard_ctx.strokeRect(snakePart.x, snakePart.y, 10, 10);
 }
@@ -125,7 +138,7 @@ function drawSnake() {
 
 function drawFood() {
 	snakeboard_ctx.fillStyle = food_col;
-	snakeboard_ctx.strokestyle = food_border;
+	snakeboard_ctx.strokeStyle = food_border;
 	snakeboard_ctx.fillRect(food_x, food_y, 10, 10);
 	snakeboard_ctx.strokeRect(food_x, food_y, 10, 10);
 }
