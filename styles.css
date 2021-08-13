@@ -296,7 +296,7 @@ p{color:#806560}
 /* Games Mobile */
 /****************************************************/
 
-@media only screen and (max-width: 850px) and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 3) {
+@media only screen and (max-device-width: 850px) and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 3) {
 	#games #mobileDisclaimer{
 		display:block;
 	}
