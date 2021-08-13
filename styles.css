@@ -109,14 +109,6 @@ p{color:#806560}
 }
 
 /****************************************************/
-/* MOBILE EXPERIENCE SECTION */
-/****************************************************/
-@media only screen and (max-device-width: 850px) and (-webkit-min-device-pixel-ratio: 3) {
-	#experience .content #work .content{
-		grid-template-columns: 1fr;
-	}
-}
-/****************************************************/
 /* WORK SECTION */
 /****************************************************/
 #work a {
