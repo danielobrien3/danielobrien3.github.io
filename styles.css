@@ -272,11 +272,17 @@ p{color:#806560}
 	text-align: center;
 }
 
+#games #mobileDisclaimer{
+	display:none;
+}
+
+
+
 #games .gameInstructions{
 	text-align:center;
 	font-size:12px;
 	margin-top:-24px;
-	
+
 }
 
 #games .content .snakeCanvas{
@@ -284,6 +290,19 @@ p{color:#806560}
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+}
+
+/****************************************************/
+/* Games Mobile */
+/****************************************************/
+
+@media only screen and (max-width: 700px) {
+	#games #mobileDisclaimer{
+		display:block;
+	}
+	#games .content div{
+		display:none;
+	}
 }
 
 /****************************************************/
