@@ -49,12 +49,15 @@ document.addEventListener("keydown", change_direction);
 document.addEventListener("keydown", start_game);
 // main function called repeatedly to keep the game running
 function main() {
-	clear_board();
-	game_has_started = false;
-	console.log("game started: " + game_has_started)
-	changing_direction=false;
-	draw_start_screen();
-	score = 0
+
+	pixelFont.load().then(function(pixelFont){
+		clear_board();
+		draw_start_screen();
+		game_has_started = false;
+		console.log("game started: " + game_has_started)
+		changing_direction=false;
+		score = 0
+	})
 }
 
 function cycle(){
@@ -75,22 +78,22 @@ function cycle(){
 }
 
 function draw_start_screen(){
-	pixelFont.load().then(function(pixelFont){
-		snakeboard_ctx.fillStyle = title_col
-		snakeboard_ctx.font = score_font_size + game_font
-		
-		snakeboard_ctx.fillText("Last Score", snakeboard.width / 2, 36)
-		snakeboard_ctx.fillText(score.toString(), snakeboard.width / 2, 72)
-		snakeboard_ctx.font = title_font_size + game_font
-		snakeboard_ctx.fillText("Snake", snakeboard.width / 2 - (5 * 10), snakeboard.height / 2 - 36)
-		snakeboard_ctx.fillText("Press Any Button To Start", snakeboard.width / 2 - (16 * 10), snakeboard.height / 2 + 18)
+	snakeboard_ctx.textAlign = "center";
+	snakeboard_ctx.fillStyle = title_col
+	snakeboard_ctx.font = score_font_size + game_font
+	
+	snakeboard_ctx.fillText("Last Score", snakeboard.width/2, 36)
+	snakeboard_ctx.fillText(score.toString(), snakeboard.width/2, 48)
+	snakeboard_ctx.font = title_font_size + game_font
+	snakeboard_ctx.fillText("Snake", snakeboard.width/2, snakeboard.height / 2 - 36)
+	snakeboard_ctx.font = "24px " + game_font;
+	snakeboard_ctx.fillText("Any  Button  to  Start", snakeboard.width/2, snakeboard.height / 2 )
 
-		let image = new Image()
-		image.src = "images/redSnake.png"
-		image.onload = function () {
-			snakeboard_ctx.drawImage(image, snakeboard.width / 2 - 96, snakeboard.height - 200)
-		}
-	})
+	let image = new Image()
+	image.src = "images/redSnake.png"
+	image.onload = function () {
+		snakeboard_ctx.drawImage(image, snakeboard.width / 2 - 96, snakeboard.height - 222)
+	}
 }
 
 function start_game(event){
