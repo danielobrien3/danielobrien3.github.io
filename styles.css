@@ -272,6 +272,12 @@ p{color:#806560}
 	text-align: center;
 }
 
+#games .gameInstructions{
+	text-align:center;
+	font-size:12px;
+	margin-top:-24px;
+}
+
 #games .content .snakeCanvas{
         position: absolute;
         top: 50%;
