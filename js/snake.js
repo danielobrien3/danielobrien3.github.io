@@ -11,7 +11,7 @@ const title_col ="#e20047"
 let pixelFont = new FontFace('Pixel Font', 'url(fonts/ARCADECLASSIC.TTF');
 document.fonts.add(pixelFont);
 const game_font = "Pixel Font"
-const title_font_size = "48px "
+const title_font_size = "72px "
 const score_font_size = "18px "
 // title font load
 
@@ -85,9 +85,9 @@ function draw_start_screen(){
 	snakeboard_ctx.fillText("Last Score", snakeboard.width/2, 42)
 	snakeboard_ctx.fillText(score.toString(), snakeboard.width/2, 58)
 	snakeboard_ctx.font = title_font_size + game_font
-	snakeboard_ctx.fillText("Snake", snakeboard.width/2, snakeboard.height / 2 - 18)
+	snakeboard_ctx.fillText("Snake", snakeboard.width/2, snakeboard.height / 2 - 72)
 	snakeboard_ctx.font = "24px " + game_font;
-	snakeboard_ctx.fillText("Any  Button  to  Start", snakeboard.width/2, snakeboard.height / 2 )
+	snakeboard_ctx.fillText("Any  Button  to  Start", snakeboard.width/2, snakeboard.height / 2 - 60 )
 
 	let image = new Image()
 	image.src = "images/redSnake.png"
