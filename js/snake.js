@@ -85,7 +85,7 @@ function draw_start_screen(){
 	snakeboard_ctx.fillText("Last Score", snakeboard.width/2, 42)
 	snakeboard_ctx.fillText(score.toString(), snakeboard.width/2, 58)
 	snakeboard_ctx.font = title_font_size + game_font
-	snakeboard_ctx.fillText("Snake", snakeboard.width/2, snakeboard.height / 2 - 36)
+	snakeboard_ctx.fillText("Snake", snakeboard.width/2, snakeboard.height / 2 - 18)
 	snakeboard_ctx.font = "24px " + game_font;
 	snakeboard_ctx.fillText("Any  Button  to  Start", snakeboard.width/2, snakeboard.height / 2 )
 
