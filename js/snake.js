@@ -6,9 +6,14 @@ const food_col = "#ff8c73";
 const food_border = "black";
 const score_col = "lightblue";
 const score_border = "darkblue";
-const score_font = "16px Arial"
 const title_col ="#e20047" 
-const title_font = "36px Arial"
+
+let pixelFont = new FontFace('Pixel Font', 'url(fonts/ARCADECLASSIC.TTF');
+document.fonts.add(pixelFont);
+const game_font = "Pixel Font"
+const title_font_size = "36px "
+const score_font_size = "18px "
+// title font load
 
 let snake = [
 	{ x: 200, y: 200 }, 
@@ -29,6 +34,7 @@ let food_y;
 let dx = 10;
 // Vertical velocity
 let dy = 0;
+
 
 // Get the canvas element
 const snakeboard = document.getElementById("snakeCanvas");
@@ -69,18 +75,22 @@ function cycle(){
 }
 
 function draw_start_screen(){
-	snakeboard_ctx.fillStyle = title_col
-	snakeboard_ctx.font = title_font
-	snakeboard_ctx.fillText("Last Score", snakeboard.width/2, 36)
-	snakeboard_ctx.fillText(score.toString(), snakeboard.width/2, 72)
-	snakeboard_ctx.fillText("Snake", snakeboard.width/2 - (5*10), snakeboard.height/2 - 36)
-	snakeboard_ctx.fillText("Press Any Button To Start", snakeboard.width/2 - (16*10), snakeboard.height/2 +18)
+	pixelFont.load().then(function(pixelFont){
+		snakeboard_ctx.fillStyle = title_col
+		snakeboard_ctx.font = score_font_size + game_font
+		
+		snakeboard_ctx.fillText("Last Score", snakeboard.width / 2, 36)
+		snakeboard_ctx.fillText(score.toString(), snakeboard.width / 2, 72)
+		snakeboard_ctx.font = title_font_size + game_font
+		snakeboard_ctx.fillText("Snake", snakeboard.width / 2 - (5 * 10), snakeboard.height / 2 - 36)
+		snakeboard_ctx.fillText("Press Any Button To Start", snakeboard.width / 2 - (16 * 10), snakeboard.height / 2 + 18)
 
-	let image = new Image()
-	image.src="images/redSnake.png"
-	image.onload = function(){
-		snakeboard_ctx.drawImage(image, snakeboard.width/2 - 96, snakeboard.height - 200)
-	}
+		let image = new Image()
+		image.src = "images/redSnake.png"
+		image.onload = function () {
+			snakeboard_ctx.drawImage(image, snakeboard.width / 2 - 96, snakeboard.height - 200)
+		}
+	})
 }
 
 function start_game(event){
@@ -118,10 +128,9 @@ function move_snake() {
 }
 
 function draw_score(){
-
 	//  Select the colour to fill the drawing
+	snakeboard_ctx.font = score_font_size + game_font;
 	snakeboard_ctx.fillStyle = score_col;
-	snakeboard_ctx.font = score_font;
 	//  Select the colour for the border of the canvas
 	// Draw a "filled" rectangle to cover the entire canvas
 	snakeboard_ctx.fillText("score: " + score.toString() , snakeboard.width-((score.toString().length + 7)*8), 20)
