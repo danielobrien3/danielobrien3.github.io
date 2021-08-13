@@ -92,7 +92,7 @@ function draw_start_screen(){
 	let image = new Image()
 	image.src = "images/redSnake.png"
 	image.onload = function () {
-		snakeboard_ctx.drawImage(image, snakeboard.width / 2 - 90, snakeboard.height - 222)
+		snakeboard_ctx.drawImage(image, snakeboard.width / 2 - 90, snakeboard.height - (snakeboard.height/8) - 192)
 	}
 }
 
