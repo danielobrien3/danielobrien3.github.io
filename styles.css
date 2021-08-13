@@ -302,6 +302,7 @@ p{color:#806560}
 	}
 	#games .content div{
 		display:none;
+		text-align: center;
 	}
 }
 
